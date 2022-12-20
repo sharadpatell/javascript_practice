@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Mobile Navigation bar</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+       
+        /* Navigation bar styling */
+        .menu-list {
+            max-width: 300px;
+            margin: auto;
+            height: 500px;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+        }
+       
+        /* logo, navigation menu styling */
+        .test{
+            overflow: hidden;
+            background-color: #111;
+            position: relative;
+        }
+       
+        /* styling navigation menu */
+        .test #menus {
+            display: none;
+        }
+       
+        /* link specific styling */
+        .test a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            font-size: 16px;
+            display: block;
+        }
+       
+        /* navigation toggle menu styling */
+        .test a.icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+       
+        /* hover effect on navigation logo and menu */
+        .test a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="menu-list">
+        <div class="test">
+            <a href="#">First try</a>
+            <div id="menus">
+                <a href="https://en.wikipedia.org/wiki/Music">Music</a>
+                <a href="https://en.wikipedia.org/wiki/Cricket">Cricket</a>
+                <a href="https://en.wikipedia.org/wiki/Football">Football</a>
+                <a href="https://en.wikipedia.org/wiki/Carrom">Caroom</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="firstfunction()">
+                <i onclick="myFunction(this)" class="fa fa-plus-circle">
+
+                </i>
+            </a>
+        </div>
+    </div>
+    <script>
+        function firstfunction() {
+            var x = document.getElementById("menus");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            }else{
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("fa-minus-circle");
+        }
+    </script>
+</body>
+</html>

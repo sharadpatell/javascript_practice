@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> How to write shorthand for
+        document.getElementById()
+        method in JavaScript ?</title>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: blue;">Done by Sharad</h1>
+    <p id="sharadup" style="font-size: 20px; font-weight: bold;"></p>
+    <button onclick="sharadfun()">Click here!!!</button>
+    <p id="sharaddown" style="color: red; font-size: 24px; font-weight: bold;"></p>
+
+    <script>
+        //<!-- var ID = function(elementID){
+          //  return document.getElementById(elementID);
+        //};
+
+        //var element_up = ID("sharadup");
+        /// var element_down = ID("sharaddown"); -->
+
+        //method-2
+
+        HTMLDocument.prototype.e = document.getElementById;
+        var element_up = document.e("sharadup");
+        var element_down = document.e("sharaddown");
+
+        element_up.innerHTML = "Click on the button to select"
+            + " the element by shorthand instead"
+            + " of getElementbyId";
+        function sharadfun() {
+            element_down.innerHTML = "Element selected by"
+                + " shorthand by getelementbyid";
+        }
+    </script>
+
+</body>
+
+</html>

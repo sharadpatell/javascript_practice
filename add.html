@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Addition</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script>
+        function add() {
+            var firstnum , secondnum, sum;
+            firstnum = parseInt(document.getElementById("first").value);
+            secondnum = parseInt(document.getElementById("second").value);
+            sum = firstnum + secondnum;
+            document.getElementById("answer").value = sum;
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-3 bg-warning">
+    <p class="font-weight-bold text-info text-bold"> Enter First Number: <input type="text" id="first"></p>
+    <p class="font-weight-bold text-info "> Enter Second Number: <input type="text" id="second"></p>
+    <button onclick="add()">Add</button> <br> </br>
+    <p class="font-weight-bold text-info ">Sum = <input type="text" id="answer"></p>
+</div>
+</body>
+</html>
